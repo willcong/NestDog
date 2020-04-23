@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    script
+        include js/common.js
+
+  body
+    h1
+        content=content
+
+    div 创建账户
+      form(action="/api/users", method="post" ,content-type="application/json")
+        input(type="string" name="user_name")
+        input(type="string" name="password")
+        input(type="submit") 
+    
+    div 登录账户
+      form(action="/api/auth/login", method="post" ,content-type="application/json")
+        input(type="string" name="username")
+        input(type="string" name="password")
+        input(type="submit") 
+
+    
+
+    //- form(action="/auth", method="get")
+    //-   input(type="submit")
+    button#getAccont(onclick="getAuth()") 取账户信息

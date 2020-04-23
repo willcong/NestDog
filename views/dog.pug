@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+    script
+        include js/common.js
+
+  body
+      div 创建狗
+        form(action="/dogs", method="post" ,content-type="application/json")
+        input(type="string" name="user_name")
+        input(type="string" name="password")
+        input(type="submit") 
